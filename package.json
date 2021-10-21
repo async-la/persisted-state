@@ -1,0 +1,42 @@
+{
+  "name": "@async/persisted-state",
+  "version": "0.0.1",
+  "description": "persist state",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": "async-la/persisted-state",
+  "files": [
+    "src",
+    "lib",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc --module commonjs --outDir lib",
+    "clean": "rimraf lib",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/async-la/persisted-state#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-typescript": "^7.15.0",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.1",
+    "@types/react": "^17.0.31",
+    "husky": "^7.0.1",
+    "jest": "^27.3.1",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.3.2",
+    "react": "^17.0.2",
+    "react-test-renderer": "^17.0.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.3.5"
+  }
+}
